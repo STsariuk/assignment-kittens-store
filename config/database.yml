@@ -1,16 +1,24 @@
 pg: &pg
   adapter: postgresql
   encoding: unicode
+  host: db
+  username: postgres
+  password: password
   pool: 30
+  
 
 development:
   <<: *pg
   database: kittens_store_dev
+  
 
 test:
   <<: *pg
   database: kittens_store_test
+  
 
 production:
   <<: *pg
   database: kittens_store
+  
+  
